@@ -1,0 +1,6 @@
+#include <iostream>
+
+void gen_func(void)
+{
+    std::cout << "@MESSAGE@" << std::endl;
+}

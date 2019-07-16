@@ -1,0 +1,11 @@
+prefix=@DEST_DIR@
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: gen
+Description: Library based on generated sources
+Version: 1.0.0
+
+Libs: -L${libdir} -lgen
+Cflags: -I${includedir}
