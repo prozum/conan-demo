@@ -23,11 +23,11 @@ class DemoConan(ConanFile):
     exports_sources = ["CMakeLists.txt", "src/*"]
 
     def build(self):
-        vars = {
+        envs = {
             "CFLAGS": "-fdebug-prefix-map=%s=." % self.source_folder,
             "CXXFLAGS": "-fdebug-prefix-map=%s=." % self.source_folder,
         }
-        with tools.environment_append(vars):
+        with tools.environment_append(envs):
             cmake = CMake(self)
             cmake.configure()
             cmake.build()
